@@ -2,14 +2,12 @@ from calc_funcs import Calc
 
 if __name__ == "__main__":
     calc = Calc()
-    sum = calc.add(2,2)
-    sub = calc.sub(10,3)
-    mult = calc.mult(2,3)
-    div = calc.div(20,4)
-    pow = calc.pow(10,2)
+    calc.add(2,2, printify=True)
+    calc.sub(10,3, printify=True)
+    calc.mult(2,3, printify=True)
+    calc.div(20,4, printify=True)
+    calc.pow(10,2, printify=False)
 
-    print(f"sum 2+2: {sum}")
-    print(f"sub 10-3: {sub}")
-    print(f"mult 2*3: {mult}")
-    print(f"div 20/4: {div}")
-    print(f"pow 10^2: {pow}")
+    calc.print_total()
+    calc.clear()
+    calc.print_total()
