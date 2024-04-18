@@ -23,7 +23,7 @@ class Calc:
             print(f"{x} - {y} = {self.total}")
         elif printify == Print_Out.File_Out:
             with open("Calc_output.txt", "a") as f:
-                f.write(f"{x} + {y} = {self.total}\n")
+                f.write(f"{x} - {y} = {self.total}\n")
 
     def mult(self, x: int | float, y: int | float, printify=Print_Out.File_Out):
         self.total = x * y
@@ -47,7 +47,7 @@ class Calc:
 
     def pow(self, x: int | float, y: int | float, printify=Print_Out.File_Out):
         if printify == Print_Out.Standard_Out:
-            self.total = x ** y
+            print(f"{x} ^ {y} = {self.total}")
         elif printify == Print_Out.File_Out:
             with open("Calc_output.txt", "a") as f:
                 f.write(f"{x} ^ {y} = {self.total}\n")
@@ -60,7 +60,7 @@ class Calc:
 
 """
 1. def print, print statement. abstract for a class
-2. TODO: func for taking sum, and output to a file
+2. func for taking sum, and output to a file
 3. TODO: find a FreeAPI endpoint that I could hit, get json data.
     a. thecocktaildb
 """
